@@ -1,0 +1,10 @@
+version: 0.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: <TASK_DEFINITION>
+        LoadBalancerInfo:
+          ContainerName: web # Ecsのタスク定義のコンテナ名
+          ContainerPort: 80 # 適切なポート番号
+        PlatformVersion: 1.4.0
